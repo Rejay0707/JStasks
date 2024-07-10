@@ -192,15 +192,29 @@ class student2 {
   greet() {
     // console.log(`Hello my name is ${this.name}`);
   }
-  getFullAddress(){
+  getFullAddress() {
     // console.log(`${this.address.country},${this.address.city},${this.address.pin_code}`)
   }
 }
-const anand=new student2('Anand','anand@gmail.com',23,'India','Coimbatore',762896)
-const myself=new student2('Rejay','rejay@gmail.com',23,'India','Palappallam',629159)
-anand.greet()
-anand.getFullAddress()
-myself.getFullAddress()
+const anand = new student2(
+  "Anand",
+  "anand@gmail.com",
+  23,
+  "India",
+  "Coimbatore",
+  762896
+);
+const myself = new student2(
+  "Rejay",
+  "rejay@gmail.com",
+  23,
+  "India",
+  "Palappallam",
+  629159
+);
+anand.greet();
+anand.getFullAddress();
+myself.getFullAddress();
 
 //4. Employee Data:
 // Define the Employee Class. The class should take parameters for name, email, age, department, position, and salary. Inside the constructor method, set these parameters as properties of the employee object.
@@ -210,26 +224,33 @@ myself.getFullAddress()
 // Create another object named manager with properties representing a manager. Log this object to the console.
 // On the newEmployee object, call the introduce() method to see a greeting and role.
 // Call the displaySalary() method on the manager object to log the salary details.
-class Employee{
-  constructor(name,email,age,department,position,salary){
-    this.name=name;
-    this.email=email;
-    this.age=age;
-    this.department=department;
-    this.position=position;
-    this.salary=salary;
+class Employee {
+  constructor(name, email, age, department, position, salary) {
+    this.name = name;
+    this.email = email;
+    this.age = age;
+    this.department = department;
+    this.position = position;
+    this.salary = salary;
   }
-  introduce(){
+  introduce() {
     // console.log(`Hello everyone my name is ${this.name},${this.position}`)
   }
-  displaySalary(){
+  displaySalary() {
     // console.log(`Salary ${this.salary}`)
   }
 }
-const rejay=new Employee('Rejay','rejaysobi@gmail.com',23,'Mechatronics','Full Stack Developer',40000)
+const rejay = new Employee(
+  "Rejay",
+  "rejaysobi@gmail.com",
+  23,
+  "Mechatronics",
+  "Full Stack Developer",
+  40000
+);
 
-rejay.introduce()
-rejay.displaySalary()
+rejay.introduce();
+rejay.displaySalary();
 
 //5. Book Data:
 // Define the Book Class. The class should take parameters for title, author, publisher, year, and genre. Inside the constructor method, set these parameters as properties of the book object.
@@ -240,27 +261,170 @@ rejay.displaySalary()
 // On the classicBook object, call the describe() method to see a summary of the book.
 // Call the displayGenre() method on the sciFiBook object to log the genre.
 
-class Book{
-  constructor(title,author,publisher,year,genre){
-    this.title=title;
-    this.author=author;
-    this.publisher=publisher;
-    this.year=year;
-    this.genre=genre;
+class Book {
+  constructor(title, author, publisher, year, genre) {
+    this.title = title;
+    this.author = author;
+    this.publisher = publisher;
+    this.year = year;
+    this.genre = genre;
   }
-  describe(){
-    console.log(`${this.title} - ${this.author}(${this.year})`)
+  describe() {
+    // console.log(`${this.title} - ${this.author}(${this.year})`)
   }
-  displayGenre(){
-    console.log(`${this.genre}`)
+  displayGenre() {
+    // console.log(`${this.genre}`)
   }
 }
-const book=new Book("To Kill a Mockingbird", "Harper Lee", "Penguin Books", 1960, "Fiction")
-const classicBook=new Book("Pride and Prejudice","Jane Austen","T. Egerton, Whitehall",1813,"Romance, Satire")
-const sciFiBook=new Book("Dune","Frank Herbert","G.P. Putnam's Sons",1965,"Science Fiction, Epic Space Opera")
-book.describe()
-book.displayGenre()
-classicBook.describe()
-classicBook.displayGenre()
-sciFiBook.describe()
-sciFiBook.displayGenre()
+const book = new Book(
+  "To Kill a Mockingbird",
+  "Harper Lee",
+  "Penguin Books",
+  1960,
+  "Fiction"
+);
+const classicBook = new Book(
+  "Pride and Prejudice",
+  "Jane Austen",
+  "T. Egerton, Whitehall",
+  1813,
+  "Romance, Satire"
+);
+const sciFiBook = new Book(
+  "Dune",
+  "Frank Herbert",
+  "G.P. Putnam's Sons",
+  1965,
+  "Science Fiction, Epic Space Opera"
+);
+book.describe();
+book.displayGenre();
+classicBook.describe();
+classicBook.displayGenre();
+sciFiBook.describe();
+sciFiBook.displayGenre();
+
+// Arrays
+//1. Basic Array:
+// Define a variable named colors and assign it an array containing strings representing different colors (e.g., "red", "green", "blue").
+// Log the first element of the colors array to the console.
+// Change the second element of the colors array to "yellow". Log the second element of the colors array to the console to verify the change.
+// Add a new color to the end of the colors array. Log the last element of the colors array to the console.
+
+const colors = (arr) => {
+  // console.log(arr[0])
+  arr[1] = "yellow";
+  // console.log(arr[1])
+  arr.push("pink");
+  // console.log(arr)
+};
+colors(["red", "green", "blue"]);
+
+//2. Loops for Arrays:
+// Use a for loop to iterate over the colors array and log each color to the console.
+// Use a while loop to iterate over the colors array and log each color to the console.
+// Use a for...of loop to iterate over the colors array and log each color to the console.
+
+const colors1 = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i])
+  }
+};
+colors1(["red", "orange", "white"]);
+
+const colors2 = (arr) => {
+  let i = 0;
+  while (i < arr.length) {
+    // console.log(arr[i])
+    i++;
+  }
+};
+colors2(["white", "black", "green"]);
+
+const colors3 = (arr) => {
+  for (const color of arr) {
+    // console.log(color)
+  }
+};
+colors3(["red", "orange", "white"]);
+
+// 3.Array as an Object:
+// Use the typeof operator to check the type of colors array and console it.
+// Log the length property of the colors array to the console to see the number of elements in the array.
+// Use the push method to add another color to the end of the colors array.
+// Use the pop method to remove the last color from the colors array.
+const colors4 = (arr) => {
+  const findType = typeof arr;
+  // console.log(findType)
+  // console.log(arr.length)
+  arr.push("yellow");
+  // console.log(arr)
+  arr.pop();
+  // console.log(arr)
+};
+colors4(["brown", "purple"]);
+
+// 4.Foreach, Map, Filter:
+// Define a variable named numbers and assign it an array containing some numbers (e.g., 1, 2, 3, 4, 5).
+// Use the forEach method to iterate over the numbers array and log each number to the console.
+// Use the forEach method to iterate over the numbers array and log each number multiplied by 2 to the console.
+// Use the map method to create a new array called squaredNumbers that contains the square of each number in the numbers array. Log the squaredNumbers array to the console.
+// Rewrite the callback function passed to the map function as an arrow function.
+// Use the filter method to create a new array called evenNumbers that contains only the even numbers from the numbers array. Log the evenNumbers array to the console.
+// Rewrite the callback function passed to the filter function as an arrow function.
+
+const number = (arr) => {
+  arr.forEach((num) => {
+    // console.log(num)
+    // console.log(num*2)
+  });
+};
+number([1, 2, 3, 4, 5]);
+
+const squaredNumbers = (arr) => {
+  const result = arr.map((num) => num * num);
+  // console.log(result)
+};
+squaredNumbers([1, 2, 3, 4, 5]);
+
+const evenNumbers = (arr) => {
+  const result = arr.filter((num) => num % 2 === 0);
+  // console.log(result)
+};
+// evenNumbers([1,2,3,4,5,6])
+
+// 5.Manipulating Temperatures
+// Define a variable named temperatures and assign it an array containing several temperature readings in Celsius (e.g., -3, 14, 22, 5, -10).
+// Use the forEach method to iterate over the temperatures array and log each temperature to the console. Rewrite the callback function passed to the foreach function as an arrow function.
+// Use the forEach method to iterate over the temperatures array and convert each temperature to Fahrenheit using the formula (temperature * 9/5) + 32. Log each converted temperature to the console. Rewrite the callback function passed to the foreach function as an arrow function.
+// Use the map method to create a new array called temperaturesInFahrenheit that contains the Fahrenheit equivalent of each temperature in the temperatures array. Log the temperaturesInFahrenheit array to the console. Rewrite the callback function passed to the map function as an arrow function.
+// Use the filter method to create a new array called belowFreezing that contains only the temperatures from the temperatures array that are below 0°C. Log the belowFreezing array to the console. Rewrite the callback function passed to the filter function as an arrow function.
+const temperatures = (celsius) => {
+  celsius.forEach((num) => {
+    // console.log(num)
+    const fahrenheit = (num * 9) / 5 + 32;
+    // console.log(fahrenheit)
+  });
+};
+temperatures([-3, 14, 22, 5]);
+
+const temperaturesInFahrenheit = (celsius) => {
+  const result = celsius.map((num) => (num * 9) / 5 + 32);
+  // console.log(result)
+};
+temperaturesInFahrenheit([-2, -4, 5, 7]);
+
+const belowFreezing = (celsius) => {
+  const result = celsius.filter((num) => num < 0);
+  // console.log(result);
+};
+belowFreezing([-2, -4, 5, 7]);
+
+// 6.Operations on Fruits:
+// Define a variable named fruits and assign it an array containing the names of several fruits (e.g., "apple", "banana", "cherry", "date").
+// Use the forEach method to iterate over the fruits array and log each fruit name capitalized to the console (e.g., "Apple", "Banana", "Cherry", "Date"). Rewrite the callback function passed to the foreach function as an arrow function.
+// Use the map method to create a new array called reversedFruits that contains each fruit name reversed (e.g., "elppa"). Log the reversedFruits array to the console. Rewrite the callback function passed to the map function as an arrow function.
+// Use the filter method to create a new array called longFruits that contains only the fruit names that have more than 5 characters. Log the longFruits array to the console. Rewrite the callback function passed to the filter function as an arrow function.
+// Use filter to find fruits that contain the letter 'a', and then map to return these fruits in uppercase. Store the result in an array called aFruitsUpper and log it to the console.
+// Initialize a variable totalCharacters to 0. Use forEach to add up the number of characters in each fruit name and update totalCharacters. Log totalCharacters after the loop.
+
